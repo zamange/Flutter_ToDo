@@ -1,4 +1,3 @@
-// home_page.dart
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,8 +10,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        title: const Text("To-Do App"), // Adding title to the AppBar
+      ),
+      body: const Center(
         child: Text('Welcome to the To-Do App!'), // Added content for clarity
       ),
     );

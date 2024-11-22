@@ -1,4 +1,3 @@
-// main.dart
 import 'package:flutter/material.dart';
 import 'package:to_do/home_page.dart'; // Correct import path
 
@@ -12,9 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Build method for the widget tree
-    return const MaterialApp(
+    return MaterialApp( // Removed `const` because MaterialApp is not a constant widget
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(), // HomePage is a const widget
+      theme: ThemeData(primarySwatch: Colors.blue),
     );
   }
 }
